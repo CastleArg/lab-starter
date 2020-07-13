@@ -7,8 +7,8 @@ description: In this course you''ll learn how to create a table, insert data, an
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name:     # the name of the repository when it is created for the learner
-  repo:     # the name of the template repository from which to clone for the learner
+  name:    hello-sql # the name of the repository when it is created for the learner
+  repo:    hello-sql # the name of the template repository from which to clone for the learner
 
 # `before` block
 # Actions to take place after the learner registers, but before they start interacting with their repo
@@ -26,7 +26,7 @@ steps:
 # Step 1: INTERNAL COMMENT DESCRIBING STEP 
 - title: Create your first table
   description: Use SQL to create a table with a few colums
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  event: pull_request.synchronize # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
