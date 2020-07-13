@@ -1,70 +1,25 @@
 title: Introduction to SQL
 tagline: Store your data in a versatile robust manner.
-description: In this course you''ll learn how to create a table, insert data, and query those data..
-
-# Repository setup
-# The following section template information for the repository
-# This will be used when the repository is crated for each individual learner
-
+description: >-
+  In this course you''ll learn how to create a table, insert data, and query
+  those data..
 template:
-  name:    lab-hello-sql # the name of the repository when it is created for the learner
-  repo:    hello-sql # the name of the template repository from which to clone for the learner
-
-# `before` block
-# Actions to take place after the learner registers, but before they start interacting with their repo
-
+  name: lab-hello-sql
+  repo: false
 before:
-- type: respond
-  with: 01_first-response.md 
-# Steps for the course
-# A list of steps that take the learner through the course
-# Create one step for each action that a learner will complete
-
-
-steps: 
-  - 
-    actions: 
-      - 
-        else: 
-          - 
-            type: respond
+  - type: respond
+    with: 01_first-response.md
+steps:
+  - actions:
+      - else:
+          - type: respond
             with: 01_try-again.md
-        left: "%payload.pull_request.base.ref%"
+        left: '%payload.pull_request.base.ref%'
         operator: ===
         right: master
         type: gate
-      - 
-        type: respond
+      - type: respond
         with: 01_nice-work.md
-    description: "Use SQL to create a table with a few colums"
+    description: Use SQL to create a table with a few colums
     event: pull_request.synchronize
-    title: "Create your first table"
-
-# Step 2: INTERNAL COMMENT FOR STEP 2
-#- title: Insert some data
-#  description: there are a few different ways to do this!
-#  event: pull_request.synchronize # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
-# Step 3: INTERNAL COMMENT FOR STEP 3
-#- title: query your data
-#  description: use conditions and projections to get your desired results
-#  event: pull_request.synchronize # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
-# Step 4: INTERNAL COMMENT FOR STEP 4
-#- title: update data
-#  description: now that you know about conditions, you can update specific data
-#  event: pull_request.synchronize # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
-# Step 5: INTERNAL COMMENT FOR STEP 5
-#- title: delete data
-#  description: now's a great time to learn about transactions!
-#  event: pull_request.synchronize # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
+    title: Create your first table
