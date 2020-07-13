@@ -7,7 +7,7 @@ description: In this course you''ll learn how to create a table, insert data, an
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name:    hello-sql # the name of the repository when it is created for the learner
+  name:    lab-hello-sql # the name of the repository when it is created for the learner
   repo:    hello-sql # the name of the template repository from which to clone for the learner
 
 # `before` block
