@@ -16,11 +16,6 @@ template:
 before:
 - type: respond
   with: 01_first-response.md 
-  else:
-  - type: respond
-    with: 01_try-again.md
-- type: respond
-  with: 01_nice-work.md
 # Steps for the course
 # A list of steps that take the learner through the course
 # Create one step for each action that a learner will complete
@@ -35,6 +30,11 @@ steps:
     left: '%payload.pull_request.title%'
     operator: ===
     right: "Add create-schema.sql"
+      else:
+      - type: respond
+        with: 01_try-again.md
+- type: respond
+  with: 01_nice-work.md
 
 # Step 2: INTERNAL COMMENT FOR STEP 2
 - title: Insert some data
