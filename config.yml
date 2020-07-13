@@ -6,6 +6,7 @@ description: >-
 template:
   name: lab-hello-sql
   repo: hello-sql
+  description: a blank repo in which to make a scri
 before:
   - type: respond
     with: 01_first-response.md
@@ -18,8 +19,9 @@ steps:
         operator: ===
         right: master
         type: gate
+        every: true
       - type: respond
         with: 01_nice-work.md
-    description: Use SQL to create a table with a few colums
+    description: Use SQL to create a table with a few columns
     event: pull_request.synchronize
     title: Create your first table
