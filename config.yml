@@ -29,10 +29,10 @@ steps:
   description: Use SQL to create a table with a few colums
   event: pull_request.synchronize # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: gate # the type of action, full list at https://lab.github.com/docs/actions
-    left: '%payload.pull_request.title%' 
-    operator: ===  
-    right: 'Add create-schema.sql' 
+  - type: gate
+    left: '%payload.pull_request.title%'
+    operator: ===
+    right: "Add create-schema.sql"
 
 # Step 2: INTERNAL COMMENT FOR STEP 2
 - title: Insert some data
